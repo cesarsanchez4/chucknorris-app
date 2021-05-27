@@ -1,0 +1,33 @@
+
+
+<div class="main-content">    
+   <h3>Chuck norris</h3>
+  <div class="buscador">
+     <input type="text" placeholder="Buscar" #searchTerm>
+     <button type="button" 
+             (click)="searchBySearchTerm(searchTerm.value)">Buscar
+     </button>
+  </div>
+
+  <div class="categories">
+    <span 
+        class="category" 
+        *ngFor="let categor of categories"
+        (click)="searchByCategory(categor)">
+        {{ categor }}
+    </span>
+  </div>
+
+
+  <div class="joke-content" *ngFor="let joke of jokes">
+    <div class="joke">      
+      <p>{{ joke.value }}</p>
+    </div>
+  </div>
+ 
+ 
+</div>
+
+
+
+
